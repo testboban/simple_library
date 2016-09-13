@@ -1,4 +1,4 @@
-package com.bobbbaich.controller;
+package com.bobbbaich.handler;
 
 import com.bobbbaich.Application;
 import com.bobbbaich.dao.BookDao;
@@ -13,14 +13,14 @@ import static com.bobbbaich.utils.Console.getBookParam;
 /**
  * Created by Bohdan Pohotilyi on 13.09.2016.
  */
-public class BookController {
+public class BookHandler {
     private static final String NAME = "name";
     private static final String AUTHOR = "author";
     private static final String INDEX = "index";
 
     private BookDao bookDao;
 
-    public BookController() {
+    public BookHandler() {
         Sql2o sql2o = new Sql2o(Application.DATASOURCE,"","");
         bookDao = new BookDaoImpl(sql2o);
     }

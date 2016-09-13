@@ -1,6 +1,6 @@
 package com.bobbbaich.utils;
 
-import com.bobbbaich.controller.BookController;
+import com.bobbbaich.handler.BookHandler;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -47,7 +47,7 @@ public class Console {
     }
 
     private static void invokeMethod(String methodName) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        BookController controller = new BookController();
+        BookHandler controller = new BookHandler();
         Method method = controller.getClass().getMethod(methodName);
         method.invoke(controller);
     }
