@@ -1,0 +1,21 @@
+group 'com.bobbbaich'
+version '1.0-SNAPSHOT'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.5'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.sql2o:sql2o:1.5.4'
+    compile 'com.h2database:h2:1.4.190'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
